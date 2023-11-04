@@ -76,7 +76,7 @@ function clearItems(item){
 function showRestaurants(){
     clearItems();
     restaurants.forEach(showItem); // Use the forEach() method to call the function on each item
-
+    //fhyfjyrfdjyd
 }
 
 function showStudySpaces(){
