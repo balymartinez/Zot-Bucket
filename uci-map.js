@@ -61,6 +61,7 @@ function showItem(item) {
         showInMap(item)
     });
     const toggle = document.createElement('button');
+    
 
     list_item.appendChild(button);
     list.appendChild(list_item);
@@ -100,5 +101,4 @@ function showInMap(item){
     } else {
         activeMarker.setLatLng(item.location)
     }
-    map.panTo(item.location);
 }
