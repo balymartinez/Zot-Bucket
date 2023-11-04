@@ -10,7 +10,3 @@
 
 <!-- will have a map where we want to be  -->
 <div id="map"></div>
-
-
-<!--map container that has a defined a height -->
-#map { height: 180px; } 
