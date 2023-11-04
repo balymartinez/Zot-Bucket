@@ -21,9 +21,21 @@ const restaurants = [
     { name: 'Panda Express', location: [33.648899339073196, -117.84208400857327]},
     { name: '', location: ""},
 
-
-
 ];
+
+const study_Spaces = [
+    { name: 'Gateway Study Center', location: "33.64767975240846, -117.84159683964475"},
+    { name: 'Graduate Study Center', location: "33.64342086082128, -117.84115637545828"},
+    { name: 'Orange County & Southeast Asian Archive Center', location: "33.64727575191827, -117.84180847062977"},
+    { name: 'Student Outreach and Retention Center', location: "33.64739139130019, -117.84202161072926"},
+    { name: 'Langson Library', location: "33.64734100228406, -117.84121530101072"},
+    { name: 'Law Library', location: "33.64699820299756, -117.83598098566956"},
+    { name: 'Science Library', location: "33.645734255137604, -117.84670409988699"},
+    { name: 'Multimedia Resources Center', location: "33.64601288677165, -117.84667824231845"},
+    { name: 'Center of Excellence in Communication and Writing ', location: "33.64578539096283, -117.84640355142896"},
+    { name: 'Scholarship Oppurtunities Porgram  ', location: "33.645734255137604, -117.84670409988699"}
+];
+
 
 
  
@@ -55,6 +67,14 @@ const studySpaces = [
     { name: 'Science Library ', location: "", url: 'https://example.com/restaurant3' }
 ];
 
+const ClubsAnsEvents = [
+    { name: 'Hack @ UCI', location: "33.6432013564727, -117.8418968451981", url: 'https://linktr.ee/HackAtUCI' },
+    { name: 'Design @ UCI', location: "", url: 'https://linktr.ee/designatuci/' },
+    { name: 'WICS', location: "33.6432013564727, -117.841896845198", url: 'https://linktr.ee/wicsuci' },
+    { name: 'Venus Hacks', location: "", url: 'https://linktr.ee/venushacks/' },
+    { name: 'ICS Student Council @ UCI', location: "33.6432013564727, -117.8418968451981", url: 'https://linktr.ee/icssc.uci/' },
+    { name: 'Google Development Student Club @ UCI', location: "", url: 'https://linktr.ee/gdsc.uci' }
+];
 
 //---------------------------------
 function showItem(item) {
@@ -90,7 +110,7 @@ function showStudySpaces(){
 
 function showClubsAnsEvents(){
     clearItems();
-    // restaurants.forEach(showItem); // Use the forEach() method to call the function on each item
+    ClubsAnsEvents.forEach(showItem); // Use the forEach() method to call the function on each item
 
 }
 
