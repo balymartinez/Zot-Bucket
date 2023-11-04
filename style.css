@@ -1,0 +1,40 @@
+html, body{
+    font: "Inter", "Open Sans";
+    margin: 0;
+    box-sizing: border-box;
+    background: linear-gradient(90deg,pink,lightblue);
+
+}
+
+#list-category{
+    margin :50px;
+}
+#list-category h1{
+    display: block;
+    font-size: 40px;
+    color:#3B3B58;
+}
+
+#list-category button{
+    border: 2px solid #3B3B58;
+    border-radius: 20px;
+    background-color: #53538e;
+    padding: 10px 20px;
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    margin: 12px 0;
+    width: 30vw;
+}
+
+#detail-list{
+    margin: 50px;
+    padding: 20px;
+    border: 2px solid #3B3B58;
+}
+
+#map{
+    background-color: gray;
+    margin: 40px;
+    height: 50vw;
+}
