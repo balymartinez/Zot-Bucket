@@ -40,6 +40,10 @@ html, body{
 
 }
 
+#items button:hover{
+    color: #3B3B58;
+}
+
 #map{
     background-color: gray;
     border: 2px solid #3B3B58;
