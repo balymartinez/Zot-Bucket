@@ -61,7 +61,6 @@ function showItem(item) {
         showInMap(item)
     });
     const toggle = document.createElement('button');
-    
 
     list_item.appendChild(button);
     list.appendChild(list_item);
