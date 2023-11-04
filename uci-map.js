@@ -95,7 +95,7 @@ var activeMarker;
 
 function showInMap(item){
     if (activeMarker === undefined) {
-        activeMarker = L.marker(item.location).bindPopup("");
+        activeMarker = L.marker(item.location).bindPopup(item.url);
         activeMarker.addTo(map);
     } else {
         activeMarker.setLatLng(item.location)
