@@ -9,7 +9,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 //---------------------------------
 
 const restaurants = [
-    { name: 'Restaurant 1', location: "", url: 'https://example.com/restaurant1' },
+    { name: 'Brandywine', location: "", url: 'https://example.com/restaurant1' },
     { name: 'Restaurant 2', location: "", url: 'https://example.com/restaurant2' },
     { name: 'Restaurant 3', location: "", url: 'https://example.com/restaurant3' }
 ];
@@ -30,6 +30,7 @@ function showItem(item) {
     let list_item = document.createElement("li");
     const button = document.createElement('button');
     button.textContent = item.name;
+    button.addEventListener('click', showInMap);
     list_item.appendChild(button);
     list.appendChild(list_item);
 }
@@ -56,4 +57,9 @@ function showClubsAnsEvents(){
     clearItems();
     // restaurants.forEach(showItem); // Use the forEach() method to call the function on each item
 
+}
+
+
+function showInMap(){
+    alert("hello")
 }
