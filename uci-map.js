@@ -100,4 +100,5 @@ function showInMap(item){
     } else {
         activeMarker.setLatLng(item.location)
     }
+    map.panTo(item.location);
 }
