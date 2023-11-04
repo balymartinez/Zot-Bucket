@@ -35,6 +35,14 @@ const studySpaces = [
     { name: 'Science Library ', location: "", url: 'https://example.com/restaurant3' }
 ];
 
+const ClubsAnsEvents = [
+    { name: 'Hack @ UCI', location: "33.6432013564727, -117.8418968451981", url: 'https://linktr.ee/HackAtUCI' },
+    { name: 'Design @ UCI', location: "", url: 'https://linktr.ee/designatuci/' },
+    { name: 'WICS', location: "33.6432013564727, -117.841896845198", url: 'https://linktr.ee/wicsuci' },
+    { name: 'Venus Hacks', location: "", url: 'https://linktr.ee/venushacks/' },
+    { name: 'ICS Student Council @ UCI', location: "33.6432013564727, -117.8418968451981", url: 'https://linktr.ee/icssc.uci/' },
+    { name: 'Google Development Student Club @ UCI', location: "", url: 'https://linktr.ee/gdsc.uci' }
+];
 
 //---------------------------------
 function showItem(item) {
@@ -73,7 +81,7 @@ function showStudySpaces(){
 
 function showClubsAnsEvents(){
     clearItems();
-    // restaurants.forEach(showItem); // Use the forEach() method to call the function on each item
+    ClubsAnsEvents.forEach(showItem); // Use the forEach() method to call the function on each item
 
 }
 
