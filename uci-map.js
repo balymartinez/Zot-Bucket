@@ -19,34 +19,14 @@ const restaurants = [
     { name: 'Bento', location: "33.648830986166416, -117.84210095478684"},
     { name: 'Jamba', location: "33.648830986166416, -117.84210095478684"},
     { name: 'Panda Express', location: "33.648899339073196, -117.84208400857327"},
-    { name: '', location: ""},
-
-
-
+    { name: 'Planteatery', location: "33.648899339073196, -117.84208400857327"},
+    { name: 'Subway', location: "33.64925284884054, -117.84247968566768"},
+    { name: 'ZotnGo Market', location: "33.64872449938839, -117.84276830100971"},
+    { name: 'The Anteatery', location: "33.65119240860278, -117.84499118571881"},
+    { name: 'The Green Room', location: "33.64980183961821, -117.84472431876374"},
+    { name: 'University Club (UN CLB)', location: "33.643775880392305, -117.8420042322584"},
 ];
 
-
- 
-
-
-
- 
-
- 
-
-// Planteatery
-// Starbucks
-// Subway
-// 33.64925284884054, -117.84247968566768
-// ZotnGo Market
-// 33.64872449938839, -117.84276830100971
-// Taza
-// The Anteatery
-// 33.65119240860278, -117.84499118571881
-// The Green Room
-// 33.64980183961821, -117.84472431876374
-// University Club (UN CLB)
-// 33.643775880392305, -117.8420042322584
 
 
 const studySpaces = [
@@ -65,6 +45,9 @@ function showItem(item) {
     button.addEventListener('click', function(){
         showInMap(button.textContent)
     });
+    const toggle = document.createElement('button');
+    button.textContent = ;
+
     list_item.appendChild(button);
     list.appendChild(list_item);
 }
