@@ -54,7 +54,11 @@ const ClubsAnsEvents = [
 ];
 
 //---------------------------------
+
+
 function showItem(item) {
+
+    //add item
     let list = document.querySelector('ul');
     let list_item = document.createElement("li");
     const button = document.createElement('button');
@@ -62,8 +66,41 @@ function showItem(item) {
     button.addEventListener('click', function(){
         showInMap(item)
     });
+    // add checkmark toggle
     const toggle = document.createElement('button');
+    toggle.innerHTML = "<i class='fa-solid fa-square-check'></i>";
+    toggle.style.paddingRight = "8px";
+    toggle.classList.add('undone');
+    toggle.addEventListener('click', () => {
+        if (toggle.classList.contains("undone")){
+            toggle.classList.add("done");
+            toggle.classList.remove("undone");
+            toggle.style.color = "green";
+        } else {
+            toggle.classList.add("undone");
+            toggle.classList.remove("done")    
+            toggle.style.color = "black";
+        };
+    });
 
+    // add favorite button
+    const favorite = document.createElement('button');
+    favorite.innerHTML = '<i class="fa-regular fa-heart"></i>';
+    favorite.style.paddingRight = "8px";
+    favorite.classList.add('unfavorite');
+    favorite.addEventListener('click', () => {
+        if (favorite.classList.contains("unfavorite")){
+            favorite.classList.add("favorite");
+            favorite.classList.remove("unfavorite");
+            favorite.style.color = "red";
+        } else {
+            favorite.classList.add("unfavorite");
+            favorite.classList.remove("favorite")    
+            favorite.style.color = "black";
+        };
+    });
+    list_item.appendChild(toggle);
+    list_item.appendChild(favorite);
     list_item.appendChild(button);
     list.appendChild(list_item);
 }
