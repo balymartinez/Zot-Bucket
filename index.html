@@ -3,19 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Tutorial</title>
     
     <link rel="stylesheet" href="styles.css">
+    
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-
-
-
     
-    <title>Document</title>
+    <!-- leaflet css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <style>
+        #map
+        {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+
 </head>
 <body>
-    
-    <script scr="index.js"></script>
+    <div id="map"></div>
 </body>
 </html>
+    
+<script scr="index.js"></script>
+
+<!-- leaflet js -->
+<script scr= "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    // Map initialization
+    var map = L.map('map').setView([33.6459647, -117.8427597], 16.44);
+    // osm layer
+    var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
+    osm.addTo(map)
+</script>
