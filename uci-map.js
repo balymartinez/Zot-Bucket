@@ -30,9 +30,16 @@ const restaurants = [
 
 
 const studySpaces = [
-    { name: 'Langson Library', location: [], url: 'https://example.com/restaurant1' },
-    { name: 'Law Library', location: [], url: 'https://example.com/restaurant2' },
-    { name: 'Science Library ', location: [], url: 'https://example.com/restaurant3' }
+    { name: 'Gateway Study Center', location: [33.64767975240846, -117.84159683964475], url: 'https://example.com/restaurant1' },
+    { name: 'Graduate Study Center', location: [33.64734100228406, -117.84121530101072], url: 'https://example.com/restaurant2' },
+    { name: 'Orange County & Southeast Asian Archive Center', location: [33.64727575191827, -117.84180847062977], url: 'https://example.com/restaurant3' },
+    { name: 'Student Outreach and Retention Center', location: [33.64739139130019, -117.84202161072926], url: 'https://example.com/restaurant1' },
+    { name: 'Langson Library', location: [33.64734100228406, -117.84121530101072], url: 'https://example.com/restaurant2' },
+    { name: 'Law Library', location: [33.64699820299756, -117.83598098566956], url: 'https://example.com/restaurant3' },
+    { name: 'Science Library', location: [33.645734255137604, -117.84670409988699], url: 'https://example.com/restaurant1' },
+    { name: 'Center of Excellence in Communication and Writing', location: [33.64578539096283, -117.84640355142896], url: 'https://example.com/restaurant2' },
+    { name: 'Multimedia Resources Center', location: [33.64601288677165, -117.84667824231845], url: 'https://example.com/restaurant3' },
+    { name: 'Scholarship Oppurtunities Porgram ', location: [33.645734255137604, -117.84670409988699], url: 'https://example.com/restaurant3' }
 ];
 
 const ClubsAnsEvents = [
