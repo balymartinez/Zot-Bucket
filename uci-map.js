@@ -96,10 +96,11 @@ var activeMarker;
 
 function showInMap(item){
     if (activeMarker === undefined) {
-        activeMarker = L.marker(item.location).bindPopup(item.url);
+        activeMarker = L.marker(item.location);
         activeMarker.addTo(map);
     } else {
-        activeMarker.setLatLng(item.location)
+        activeMarker.setLatLng(item.location);
     }
+    activeMarker.bindPopup(item.url);
     map.flyTo(item.location);
 }
