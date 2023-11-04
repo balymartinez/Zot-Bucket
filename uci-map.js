@@ -101,6 +101,6 @@ function showInMap(item){
     } else {
         activeMarker.setLatLng(item.location);
     }
-    activeMarker.bindPopup(item.url);
+    activeMarker.bindPopup(item.url).openPopup();
     map.flyTo(item.location);
 }
