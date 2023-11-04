@@ -84,13 +84,4 @@
 <!-- leaflet js -->
 <script scr="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<script>
-    // Map initialization
-    var map = L.map('map').setView([33.6473274, -117.8453464], 15.5);
-    // osm layer
-    var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    });
-    osm.addTo(map);
-</script>
+<script type="text/javascript" src="uci-map.js"></script>
