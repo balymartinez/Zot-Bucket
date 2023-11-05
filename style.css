@@ -5,6 +5,13 @@ html, body{
     background: linear-gradient(90deg,pink,lightblue);
 
 }
+#title{
+    color:rgb(237, 178, 102);
+    font-family: "Agbalumo";
+    font-size: 25px;
+    position: absolute;
+    right: 100px;
+}
 
 #list-category{
     margin : 40px;
@@ -54,8 +61,8 @@ html, body{
     border: 2px solid #3B3B58;
     border-radius: 20px;
     /* margin: auto; */
-    height: 40vw;
-    width: 40vw;
+    height: 30vw;
+    width: 30vw;
 }
 
 #submit-button{

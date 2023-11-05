@@ -72,6 +72,12 @@ function showItem(item) {
     let list_item = document.createElement("li");
     const button = document.createElement('button');
     button.textContent = item.name;
+    button.addEventListener('mouseover', () => {
+        button.style.color = 'brown';
+    });
+    button.addEventListener('mouseout', () => {
+        button.style.color = 'black';
+      });
     button.addEventListener('click', function(){
     showInMap(item)
     });
@@ -198,7 +204,7 @@ function showInMap(item){
 }
 
 function submit(){
-    
+
 }
 
 // window.onbeforeunload = function(){
