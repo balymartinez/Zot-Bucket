@@ -5,6 +5,13 @@ html, body{
     background: linear-gradient(90deg, pink,lightblue);
 
 }
+#title{
+    color:rgb(237, 178, 102);
+    font-family: "Agbalumo";
+    font-size: 25px;
+    position: absolute;
+    right: 100px;
+}
 
 #list-category{
     margin : 40px;
