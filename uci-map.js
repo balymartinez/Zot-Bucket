@@ -105,6 +105,12 @@ function showItem(item) {
     list.appendChild(list_item);
 }
 
+var shown = false;
+function showDiv() {
+    shown = true;
+    document.getElementById('detail-list').style.display = "block";
+}
+
 function clearItems(item){
     let list = document.querySelector('#items');
     while (list.firstChild) {
@@ -113,18 +119,27 @@ function clearItems(item){
 }
 
 function showRestaurants(){
+    if(!shown) {
+        showDiv();
+    }
     clearItems();
     restaurants.forEach(showItem); // Use the forEach() method to call the function on each item
     //fhyfjyrfdjyd
 }
 
 function showStudySpaces(){
+    if(!shown) {
+        showDiv();
+    }
     clearItems();
     studySpaces.forEach(showItem); // Use the forEach() method to call the function on each item
 
 }
 
 function showClubsAnsEvents(){
+    if(!shown) {
+        showDiv();
+    }
     clearItems();
     ClubsAnsEvents.forEach(showItem); // Use the forEach() method to call the function on each item
 
