@@ -99,15 +99,22 @@ function showItem(item) {
     favorite.style.paddingRight = "8px";
     favorite.classList.add('unfavorite');
     favorite.addEventListener('click', () => {
-    if (favorite.classList.contains("unfavorite")){
-    favorite.classList.add("favorite");
-    favorite.classList.remove("unfavorite");
-    favorite.style.color = "red";
-    } else {
-    favorite.classList.add("unfavorite");
-    favorite.classList.remove("favorite")
-    favorite.style.color = "black";
-    };
+        if (favorite.classList.contains("unfavorite")){
+            favorite.classList.add("favorite");
+            favorite.classList.remove("unfavorite");
+            favorite.style.color = "red";
+            favorite_item = favorite.nextElementSibling.innerHTML;
+            favorite_list.push(favorite_item);
+            console.log(favorite_list);
+        } else {
+            favorite.classList.add("unfavorite");
+            favorite.classList.remove("favorite")    
+            favorite.style.color = "black";
+            unfavorite_item = favorite.nextElementSibling.innerHTML;
+            index_to_remove = favorite_list.indexOf(unfavorite_item);
+            favorite_list.splice(index_to_remove,1);
+            console.log(favorite_list);
+        };
     });
     list_item.appendChild(toggle);
     list_item.appendChild(favorite);
