@@ -208,20 +208,24 @@ function showAllLists(){
     var f = localStorage.getItem("favorite_list");
     var c = localStorage.getItem("checked_list");
 
+    //clear existing item
     let f_list = document.getElementById("favorite-list");
+    let c_list = document.getElementById("completed-list");
+
+    while (f_list.firstChild) {
+        f_list.removeChild(f_list.firstChild);
+    }
+    while (c_list.firstChild) {
+        c_list.removeChild(c_list.firstChild);
+    }
+
+    //show new items
     let f_list_item = document.createElement("li");
     f_list_item.textContent = f;
     f_list.appendChild(f_list_item);
 
-    let c_list = document.getElementById("completed-list");
+
     let c_list_item = document.createElement("li");
     c_list_item.textContent = c;
     c_list.appendChild(c_list_item);
 }
-
-
-
-// window.onbeforeunload = function(){
-//     // Do something
-//     localStorage.clear();
-//  }
