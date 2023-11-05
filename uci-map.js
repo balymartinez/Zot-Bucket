@@ -60,8 +60,6 @@ var favorite_list = [];
 let checked_list = [];
 
 function showItem(item) {
-
-
     //add item
     let list = document.querySelector('ul');
     let list_item = document.createElement("li");
@@ -74,7 +72,7 @@ function showItem(item) {
         button.style.color = 'black';
       });
     button.addEventListener('click', function(){
-    showInMap(item)
+        howInMap(item)
     });
     // add checkmark toggle
     const toggle = document.createElement('button');
@@ -82,22 +80,23 @@ function showItem(item) {
     toggle.style.paddingRight = "8px";
     toggle.classList.add('undone');
     toggle.addEventListener('click', () => {
-    if (toggle.classList.contains("undone")){
-    toggle.classList.add("done");
-    toggle.classList.remove("undone");
-    toggle.style.color = "green";
-    completed_item = toggle.nextElementSibling.nextElementSibling.innerHTML;
-    checked_list.push(completed_item);
-    console.log(checked_list);
-    } else {
-    toggle.classList.add("undone");
-    toggle.classList.remove("done")
-    toggle.style.color = "black";
-    uncompleted_item = toggle.nextElementSibling.nextElementSibling.innerHTML;
-    index_to_remove = checked_list.indexOf(uncompleted_item);
-    checked_list.splice(index_to_remove,1);
-    console.log(checked_list);
-    };
+        if (toggle.classList.contains("undone")){
+            toggle.classList.add("done");
+            toggle.classList.remove("undone");
+            toggle.style.color = "green";
+            completed_item = toggle.nextElementSibling.nextElementSibling.innerHTML;
+            checked_list.push(completed_item);
+            console.log(checked_list);
+        } else {
+            toggle.classList.add("undone");
+            toggle.classList.remove("done")
+            toggle.style.color = "black";
+            uncompleted_item = toggle.nextElementSibling.nextElementSibling.innerHTML;
+            index_to_remove = checked_list.indexOf(uncompleted_item);
+            checked_list.splice(index_to_remove,1);
+            console.log(checked_list);
+        };
+        localStorage.setItem("checked_list", checked_list);
     });
     
     
@@ -122,10 +121,9 @@ function showItem(item) {
             index_to_remove = favorite_list.indexOf(unfavorite_item);
             favorite_list.splice(index_to_remove,1);
             console.log(favorite_list);  
-            
         };
         localStorage.setItem("favorite_list", favorite_list);
-        localStorage.setItem("checked_list", checked_list);
+        
 
 
     });
