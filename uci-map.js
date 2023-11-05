@@ -65,6 +65,12 @@ function showItem(item) {
     let list_item = document.createElement("li");
     const button = document.createElement('button');
     button.textContent = item.name;
+    button.addEventListener('mouseover', () => {
+        button.style.color = 'brown';
+    });
+    button.addEventListener('mouseout', () => {
+        button.style.color = 'black';
+      });
     button.addEventListener('click', function(){
     showInMap(item)
     });
@@ -121,6 +127,11 @@ function showItem(item) {
     list_item.appendChild(button);
     list.appendChild(list_item);
     }
+
+function showSubmitButton(){
+    let submit_button = document.querySelector("#submit-button");
+    submit_button.style.display = "block";
+}
     
 
 var shown = false;
@@ -142,7 +153,7 @@ function showRestaurants(){
     }
     clearItems();
     restaurants.forEach(showItem); // Use the forEach() method to call the function on each item
-    //fhyfjyrfdjyd
+    showSubmitButton();
 }
 
 function showStudySpaces(){
@@ -151,6 +162,7 @@ function showStudySpaces(){
     }
     clearItems();
     studySpaces.forEach(showItem); // Use the forEach() method to call the function on each item
+    showSubmitButton();
 
 }
 
@@ -160,6 +172,7 @@ function showClubsAnsEvents(){
     }
     clearItems();
     ClubsAnsEvents.forEach(showItem); // Use the forEach() method to call the function on each item
+    showSubmitButton();
 
 }
 
@@ -174,4 +187,8 @@ function showInMap(item){
     }
     activeMarker.bindPopup(`<a href="${item.url}">${item.name}</a>`).openPopup();
     map.flyTo(item.location);
+}
+
+function submit(){
+
 }

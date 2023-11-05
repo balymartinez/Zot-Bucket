@@ -7,11 +7,12 @@ html, body{
 }
 
 #list-category{
-    margin :50px;
+    margin : 40px;
 }
 #list-category h1{
     display: block;
-    font-size: 50px;
+    font-size: 40px;
+    margin-bottom: 40px;
     color:#3B3B58;
 }
 
@@ -34,6 +35,7 @@ html, body{
 
 #detail-list{
     margin: 50px;
+    margin-left: 40px;
     padding: 20px;
     border: 2px solid #3B3B58;
     border-radius: 20px;
@@ -54,4 +56,32 @@ html, body{
     /* margin: auto; */
     height: 30vw;
     width: 30vw;
+}
+
+#submit-button{
+    display: none;
+    margin: 0 50px;
+    border: 2px solid #3B3B58;
+    background-color: rgb(237, 178, 102);
+    border-radius: 20px;
+    width: 100px;
+}
+#submit-button:hover{
+    background-color: #3B3B58;
+    color: white;
+
+}
+
+#submit-button{
+    display: none;
+    margin: 0 50px;
+    border: 2px solid #3B3B58;
+    background-color: rgb(237, 178, 102);
+    border-radius: 20px;
+    width: 100px;
+}
+#submit-button:hover{
+    background-color: #3B3B58;
+    color: white;
+
 }
