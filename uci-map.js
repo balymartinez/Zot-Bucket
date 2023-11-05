@@ -72,7 +72,7 @@ function showItem(item) {
         button.style.color = 'black';
       });
     button.addEventListener('click', function(){
-        howInMap(item)
+        showInMap(item)
     });
     // add checkmark toggle
     const toggle = document.createElement('button');
