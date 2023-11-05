@@ -54,7 +54,14 @@ const ClubsAnsEvents = [
 ];
 
 //---------------------------------
-let favorite_list = [];
+// var temp = localStorage.getItem("favorite_list");
+var favorite_list = [];
+// if(temp === null || temp === undefined) {
+//     favorite_list = ["hahha"];
+// } else {
+//     favorite_list = temp;
+// }
+
 let checked_list = [];
 
 function showItem(item) {
@@ -113,13 +120,16 @@ function showItem(item) {
             unfavorite_item = favorite.nextElementSibling.innerHTML;
             index_to_remove = favorite_list.indexOf(unfavorite_item);
             favorite_list.splice(index_to_remove,1);
-            console.log(favorite_list);
+            console.log(favorite_list);  
+            
         };
+        localStorage.setItem("favorite_list", favorite_list);
     });
     list_item.appendChild(toggle);
     list_item.appendChild(favorite);
     list_item.appendChild(button);
     list.appendChild(list_item);
+    
     }
 
 function showSubmitButton(){
@@ -127,6 +137,10 @@ function showSubmitButton(){
     submit_button.style.display = "block";
 }
     
+function test(){
+    var l = localStorage.getItem("favorite_list");
+    alert(l);
+}
 
 var shown = false;
 function showDiv() {
@@ -186,3 +200,8 @@ function showInMap(item){
 function submit(){
     
 }
+
+// window.onbeforeunload = function(){
+//     // Do something
+//     localStorage.clear();
+//  }
