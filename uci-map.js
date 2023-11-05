@@ -54,13 +54,8 @@ const ClubsAnsEvents = [
 ];
 
 //---------------------------------
-// var temp = localStorage.getItem("favorite_list");
 var favorite_list = [];
-// if(temp === null || temp === undefined) {
-//     favorite_list = ["hahha"];
-// } else {
-//     favorite_list = temp;
-// }
+
 
 let checked_list = [];
 
@@ -130,6 +125,9 @@ function showItem(item) {
             
         };
         localStorage.setItem("favorite_list", favorite_list);
+        localStorage.setItem("checked_list", checked_list);
+
+
     });
     list_item.appendChild(toggle);
     list_item.appendChild(favorite);
@@ -143,10 +141,6 @@ function showSubmitButton(){
     submit_button.style.display = "block";
 }
     
-// function test(){
-
-
-// }
 
 var shown = false;
 function showDiv() {
@@ -204,16 +198,30 @@ function showInMap(item){
 }
 
 function submit(){
-    var l = localStorage.getItem("favorite_list");
-    alert(l);
-
-    let list = document.querySelector('ul');
-    let list_item = document.createElement("li");
-    const button = document.createElement('button');
-    button.textContent = item.name;
-
-
+    var f = localStorage.getItem("favorite_list");
+    var c = localStorage.getItem("checked_list");
+    
+    //do something later
 }
+
+
+
+function showAllLists(){
+    var f = localStorage.getItem("favorite_list");
+    var c = localStorage.getItem("checked_list");
+
+    let f_list = document.getElementById("favorite-list");
+    let f_list_item = document.createElement("li");
+    f_list_item.textContent = f;
+    f_list.appendChild(f_list_item);
+
+    let c_list = document.getElementById("completed-list");
+    let c_list_item = document.createElement("li");
+    c_list_item.textContent = c;
+    c_list.appendChild(c_list_item);
+}
+
+
 
 // window.onbeforeunload = function(){
 //     // Do something
