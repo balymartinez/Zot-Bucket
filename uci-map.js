@@ -54,9 +54,11 @@ const ClubsAnsEvents = [
 ];
 
 //---------------------------------
-
+let favorite_list = [];
+let checked_list = [];
 
 function showItem(item) {
+
 
     //add item
     let list = document.querySelector('ul');
@@ -64,7 +66,7 @@ function showItem(item) {
     const button = document.createElement('button');
     button.textContent = item.name;
     button.addEventListener('click', function(){
-        showInMap(item)
+    showInMap(item)
     });
     // add checkmark toggle
     const toggle = document.createElement('button');
@@ -72,38 +74,47 @@ function showItem(item) {
     toggle.style.paddingRight = "8px";
     toggle.classList.add('undone');
     toggle.addEventListener('click', () => {
-        if (toggle.classList.contains("undone")){
-            toggle.classList.add("done");
-            toggle.classList.remove("undone");
-            toggle.style.color = "green";
-        } else {
-            toggle.classList.add("undone");
-            toggle.classList.remove("done")    
-            toggle.style.color = "black";
-        };
+    if (toggle.classList.contains("undone")){
+    toggle.classList.add("done");
+    toggle.classList.remove("undone");
+    toggle.style.color = "green";
+    completed_item = toggle.nextElementSibling.nextElementSibling.innerHTML;
+    checked_list.push(completed_item);
+    console.log(checked_list);
+    } else {
+    toggle.classList.add("undone");
+    toggle.classList.remove("done")
+    toggle.style.color = "black";
+    uncompleted_item = toggle.nextElementSibling.nextElementSibling.innerHTML;
+    index_to_remove = checked_list.indexOf(uncompleted_item);
+    checked_list.splice(index_to_remove,1);
+    console.log(checked_list);
+    };
     });
-
+    
+    
     // add favorite button
     const favorite = document.createElement('button');
     favorite.innerHTML = '<i class="fa-regular fa-heart"></i>';
     favorite.style.paddingRight = "8px";
     favorite.classList.add('unfavorite');
     favorite.addEventListener('click', () => {
-        if (favorite.classList.contains("unfavorite")){
-            favorite.classList.add("favorite");
-            favorite.classList.remove("unfavorite");
-            favorite.style.color = "red";
-        } else {
-            favorite.classList.add("unfavorite");
-            favorite.classList.remove("favorite")    
-            favorite.style.color = "black";
-        };
+    if (favorite.classList.contains("unfavorite")){
+    favorite.classList.add("favorite");
+    favorite.classList.remove("unfavorite");
+    favorite.style.color = "red";
+    } else {
+    favorite.classList.add("unfavorite");
+    favorite.classList.remove("favorite")
+    favorite.style.color = "black";
+    };
     });
     list_item.appendChild(toggle);
     list_item.appendChild(favorite);
     list_item.appendChild(button);
     list.appendChild(list_item);
-}
+    }
+    
 
 var shown = false;
 function showDiv() {
