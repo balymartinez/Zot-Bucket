@@ -2,7 +2,7 @@ html, body{
     font: "Inter", "Open Sans";
     margin: 0;
     box-sizing: border-box;
-    background: linear-gradient(90deg,pink,lightblue);
+    background: linear-gradient(90deg, pink,lightblue);
 
 }
 #title{
