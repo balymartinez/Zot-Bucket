@@ -143,10 +143,10 @@ function showSubmitButton(){
     submit_button.style.display = "block";
 }
     
-function test(){
-    var l = localStorage.getItem("favorite_list");
-    alert(l);
-}
+// function test(){
+
+
+// }
 
 var shown = false;
 function showDiv() {
@@ -204,6 +204,14 @@ function showInMap(item){
 }
 
 function submit(){
+    var l = localStorage.getItem("favorite_list");
+    alert(l);
+
+    let list = document.querySelector('ul');
+    let list_item = document.createElement("li");
+    const button = document.createElement('button');
+    button.textContent = item.name;
+
 
 }
 
